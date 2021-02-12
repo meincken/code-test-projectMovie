@@ -26,20 +26,13 @@ const Star = styled.p`
 `;
 
 function Movies({ movie, index, genres }) {
+  const posterPath = `https://image.tmdb.org/t/p/w500`;
   return movie.visible || movie.visible === undefined ? (
     <MovieArticle>
-      <img
-        alt={movie.title}
-        src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-      />
+      <img alt={movie.title} src={`${posterPath}${movie.poster_path}`} />
       <MovieContent>
-        <h2>{movie.original_title}</h2>
-        <Star>
-          ⭐️
-          {Number(((movie.vote_average + Number.EPSILON) * 100) / 100).toFixed(
-            1
-          )}
-        </Star>
+        <h2>{movie.title}</h2>
+        <Star>Rating: {movie.vote_average}/10</Star>
         <Meta>
           {movie.genre_ids.map((movie_genre) => (
             <Genre
