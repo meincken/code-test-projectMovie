@@ -41,6 +41,10 @@ const SliderSection = styled.div`
     margin: 2rem auto;
     width: 30rem;
     height: 12px;
+
+    .rangeslider__fill {
+      background-color: rgb(169, 204, 23);
+    }
   }
 `;
 

@@ -30,7 +30,7 @@ function Template() {
       fetchData();
       setInitialized(true);
     }
-  });
+  }, [initialized]);
 
   const handleGenreChange = (element, itemChecked) => {
     setInitialRating(false);

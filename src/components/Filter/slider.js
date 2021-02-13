@@ -14,7 +14,7 @@ function RateSlider({ rating, handleRatingChange, initialRating }) {
           or above
         </p>
       ) : (
-        <div>Click to filter by rating</div>
+        <div>Filter by rating</div>
       )}
       <Slider
         min={0}
